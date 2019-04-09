@@ -8,13 +8,17 @@ import { CategoriesComponent } from './categories/categories.component';
 import { CategoryComponent } from './category/category.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { RecipesService } from './services/recipes.service';
+import { FavouritesComponent } from './favourites/favourites.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoriesComponent,
     CategoryComponent,
-    RecipeComponent
+    RecipeComponent,
+    FavouritesComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
