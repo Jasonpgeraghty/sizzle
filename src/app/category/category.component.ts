@@ -8,17 +8,23 @@ import { RecipesService } from '../services/recipes.service';
 })
 export class CategoryComponent implements OnInit {
 
+  private queryValue: string;
+  private recipes: any;
+
   constructor(
-    private recipes: RecipesService
+    private recipeService: RecipesService
   ) {
-    const data = this.recipes.searchRecipes('chicken')
+    this.recipeService.searchRecipes('chicken')
     .subscribe(
-      recipes => {
-        console.log(recipes);
+      (recipes: any) => {
+        this.recipes = recipes.hits;
+        console.log(recipes.hits);
     });
   }
 
+
   ngOnInit() {
+
   }
 
 }
