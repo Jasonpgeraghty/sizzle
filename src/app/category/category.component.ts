@@ -8,8 +8,8 @@ import { RecipesService } from '../services/recipes.service';
 })
 export class CategoryComponent implements OnInit {
 
-  private queryValue: string;
-  private recipes: any;
+  queryValue: string;
+  recipes: any;
 
   constructor(
     private recipeService: RecipesService
