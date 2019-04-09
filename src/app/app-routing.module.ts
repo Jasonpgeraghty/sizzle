@@ -8,7 +8,9 @@ const routes: Routes = [
   {path: '', component: CategoriesComponent},
   {path: 'category/:name', component: CategoryComponent},
   {path: 'recipe/:name', component: RecipeComponent},
-  {path: '**', component: CategoriesComponent}
+  {path: 'ingredients', component: RecipeComponent},//to finish
+  {path: 'country', component: RecipeComponent},//to finish
+  {path: '**', component: CategoriesComponent}//to finish
 ];
 
 @NgModule({
