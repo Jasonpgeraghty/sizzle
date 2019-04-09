@@ -8,6 +8,8 @@ const routes: Routes = [
   {path: '', component: CategoriesComponent},
   {path: 'category/:name', component: CategoryComponent},
   {path: 'recipe/:name', component: RecipeComponent},
+  {path: 'favourites', component: RecipeComponent},//to finish
+  {path: 'search', component: RecipeComponent},//to finish
   {path: 'ingredients', component: RecipeComponent},//to finish
   {path: 'country', component: RecipeComponent},//to finish
   {path: '**', component: CategoriesComponent}//to finish
