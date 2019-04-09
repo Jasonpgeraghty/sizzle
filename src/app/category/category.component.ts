@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipesService } from '../services/recipes.service';
 
 @Component({
   selector: 'app-category',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private recipes: RecipesService
+  ) {
+    const data = this.recipes.searchRecipes('chicken')
+    .subscribe(
+      recipes => {
+        console.log(recipes);
+    });
+  }
 
   ngOnInit() {
   }
