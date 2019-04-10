@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocationService } from '../services/location.service';
 
 @Component({
   selector: 'app-country',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountryComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private location: LocationService
+  ) { }
 
   ngOnInit() {
+    this.location.getLocation();
   }
 
 }
