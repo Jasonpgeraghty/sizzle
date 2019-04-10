@@ -5,19 +5,23 @@ import { Injectable } from '@angular/core';
 })
 export class LocationService {
 
-  constructor() { }
+  constructor(
+  ) { }
 
 getLocation() {
-  // Event listener
-  return navigator
-  .geolocation
-  .getCurrentPosition(this.getPositionSuccess,
-    this.getPositionError,
-    {enableHighAccuracy: true});
+  let coords: any;
+
+  coords = navigator
+                .geolocation
+                .getCurrentPosition(
+                  this.getPositionSuccess,
+                  this.getPositionError,
+                  {enableHighAccuracy: true}
+                  );
+  return coords;
 }
 
 // Location callbacks
-
 getPositionSuccess(position) {
     console.log(position);
 }
