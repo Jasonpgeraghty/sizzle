@@ -17,6 +17,9 @@ export class CategoryComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private router: Router
   ) {
+
+    this.recipes = null;
+
     this.activeRoute.paramMap.subscribe(params => {
 
     const recipe = params.get('name');
@@ -26,7 +29,6 @@ export class CategoryComponent implements OnInit {
       (recipes: any) => {
         if (recipes !== undefined) {
           this.recipes = recipes.hits;
-          console.log(recipes.hits);
         }
     });
     });
