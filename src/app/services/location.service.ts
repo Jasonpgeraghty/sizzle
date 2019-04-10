@@ -12,12 +12,12 @@ getLocation() {
   let coords: any;
 
   coords = navigator
-                .geolocation
-                .getCurrentPosition(
-                  this.getPositionSuccess,
-                  this.getPositionError,
-                  {enableHighAccuracy: true}
-                  );
+            .geolocation
+            .getCurrentPosition(
+              this.getPositionSuccess,
+              this.getPositionError,
+              {enableHighAccuracy: true}
+              );
   return coords;
 }
 
