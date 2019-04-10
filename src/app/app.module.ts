@@ -10,6 +10,8 @@ import { RecipeComponent } from './recipe/recipe.component';
 import { RecipesService } from './services/recipes.service';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { SearchComponent } from './search/search.component';
+import { IngredientsComponent } from './ingredients/ingredients.component';
+import { CountryComponent } from './country/country.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SearchComponent } from './search/search.component';
     CategoryComponent,
     RecipeComponent,
     FavouritesComponent,
-    SearchComponent
+    SearchComponent,
+    IngredientsComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,
