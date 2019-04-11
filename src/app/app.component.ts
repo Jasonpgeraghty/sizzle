@@ -8,6 +8,8 @@ import {
   group,
   animateChild
 } from '@angular/animations';
+import { Title } from '@angular/platform-browser';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -36,5 +38,29 @@ import {
 })
 /* End of referenced code that has been modified */
 export class AppComponent {
-  title = 'sizzle';
+  title = 'Sizzle';
+
+  constructor(
+    private router: Router,
+    private componentTitle: Title,
+    private activatedRoute: ActivatedRoute
+    ) {}
+
+    ngOnInit() {
+      this.router.events
+    .subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url !== '/') {
+          this.title = this.removeSlashes(event.url);
+        } else {
+          this.title = 'Sizzle';
+        }
+      }
+    });
+    }
+
+    removeSlashes(title: string) {
+      const newTitle = title.split('/').pop();
+      return newTitle.charAt(0).toUpperCase() + newTitle.slice(1);
+    }
 }
