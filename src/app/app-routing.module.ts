@@ -7,6 +7,7 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { SearchComponent } from './search/search.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CountryComponent } from './country/country.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', component: CategoriesComponent},
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path: 'search', component: SearchComponent},
   {path: 'ingredients', component: IngredientsComponent},
   {path: 'country', component: CountryComponent},
-  {path: '**', component: CategoriesComponent}//to finish
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
