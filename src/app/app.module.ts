@@ -14,6 +14,7 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { SearchComponent } from './search/search.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CountryComponent } from './country/country.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CountryComponent } from './country/country.component';
     FavouritesComponent,
     SearchComponent,
     IngredientsComponent,
-    CountryComponent
+    CountryComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
