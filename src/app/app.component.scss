@@ -1,11 +1,40 @@
-div:last-of-type {
-  background: rgb(255, 187, 15);
-}
-div:last-of-type img{
+/* ###################################################### */
+/* ##################### Variables ###################### */
+/* ###################################################### */
+$top-bar-height: 3.5rem;
+$bottom-bar-height: 4rem;
+/* ###################################################### */
+/* ################### Tabs & Top bar ################### */
+/* ###################################################### */
+div:first-of-type img {
+  padding:0;
+  height: $top-bar-height;
+  width:auto;
   transition: transform .2s;
 }
-div:last-of-type img:hover, div:last-of-type img:focus {
+footer div {
+  display:inline-block;
+  text-align:center;
+}
+footer img {
+  height:4rem;
+  width:auto;
+  transition: transform .2s;
+}
+div:first-of-type, footer {
+  background: rgb(255, 187, 15);
+}
+footer img:hover, footer img:focus, div:first-of-type img:hover {
   transform: scale(1.12);
 }
+/* ###################################################### */
+/* ############### Router Outlet container ############## */
+/* ###################################################### */
+.container {
+  margin-top: calc(#{$top-bar-height} + 1rem);
+  margin-bottom: calc(#{$bottom-bar-height} + 1rem);
+}
+
+
 
 

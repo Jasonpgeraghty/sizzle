@@ -1,9 +1,17 @@
-
+<div class='fixed-top'>
+  <img class='col-3' src="../assets/Icons/back.png" alt="Back">
+</div>
 <div class='container' [@myAnimation]="o.isActivated ? o.activatedRoute : ''">
   <router-outlet #o="outlet"></router-outlet>
 </div>
-<div class='fixed-bottom'>
-  <img class='col-4' src="../assets/Icons/search.png" alt="Search" [routerLink]="['/search']">
-  <img class='col-4' src="../assets/Icons/home.png" alt="Home" [routerLink]="['/']">
-  <img class='col-4' src="../assets/Icons/favourite.png" alt="Favourites" [routerLink]="['/favourites']">
-</div>
+<footer class='fixed-bottom'>
+  <div class='col-4'>
+    <img src="../assets/Icons/search.png" alt="Search" [routerLink]="['/search']">
+  </div>
+  <div class='col-4'>
+    <img src="../assets/Icons/home.png" alt="Home" [routerLink]="['/']">
+  </div>
+  <div class='col-4'>
+    <img src="../assets/Icons/favourite.png" alt="Favourites" [routerLink]="['/favourites']">
+  </div>
+</footer>
