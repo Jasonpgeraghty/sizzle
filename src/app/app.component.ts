@@ -17,7 +17,7 @@ import { NavigateBackService } from './services/navigate-back.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-  /* Code modifed from https://medium.com/google-developer-experts/angular-supercharge-your-router-transitions-using-new-animation-features-v4-3-3eb341ede6c8 */
+  /* Code used from https://medium.com/google-developer-experts/angular-supercharge-your-router-transitions-using-new-animation-features-v4-3-3eb341ede6c8 */
     trigger('myAnimation', [
       transition('* <=> *', [
         /* order */
@@ -37,7 +37,7 @@ import { NavigateBackService } from './services/navigate-back.service';
     ])
   ] // register the animations
 })
-/* End of referenced code that has been modified */
+/* End of referenced code */
 export class AppComponent {
   title = 'Sizzle';
 
