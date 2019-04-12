@@ -19,7 +19,11 @@ export class NavigateBackService {
     });
   }
 
-  getPreviousUrl() {
+  getPreviousRoute() {
     return this.lastRoute;
+  }
+
+  getCurrentRoute() {
+    return this.currentRoute;
   }
 }
