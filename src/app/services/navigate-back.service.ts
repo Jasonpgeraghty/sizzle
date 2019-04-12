@@ -26,4 +26,9 @@ export class NavigateBackService {
   getCurrentRoute() {
     return this.currentRoute;
   }
+
+  removeSlashes(title: string) {
+    const newTitle = title.split('/').pop();
+    return newTitle.charAt(0).toUpperCase() + newTitle.slice(1).split('-').join(' ');
+  }
 }
