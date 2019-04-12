@@ -1,16 +1,8 @@
-<img src="" alt="">
+<img src="{{recipe.image}}" alt="">
 <div>
-  <h2></h2>
-  <img src="" alt="">
   <h3>Ingredients</h3>
-  <table>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-      </tr>
-  </table>
+  <img src="../../assets/Icons/small-favourite.png" alt="Favourite">
+  <ul *ngFor="let ingredient of recipe.ingredients">
+    <li>{{ingredient.text}}</li>
+  </ul>
 </div>

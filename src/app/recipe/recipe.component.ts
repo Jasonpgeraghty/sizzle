@@ -1,17 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../services/storage.service';
 
 
 @Component({
   selector: 'app-recipe',
   templateUrl: './recipe.component.html',
-  styleUrls: ['./recipe.component.sass']
+  styleUrls: ['./recipe.component.scss']
 })
 export class RecipeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private storage: StorageService
+  ) { }
+
+  recipe: any;
 
   ngOnInit() {
-    console.log(JSON.parse(localStorage.getItem('recipe')));
+    this.recipe = null;
+    this.recipe = this.storage.getRecipe();
+    console.log(this.recipe);
+  }
+
+  convertNum(string) {
+    parseFloat(string);
   }
 
 }
