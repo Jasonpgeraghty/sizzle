@@ -10,6 +10,7 @@ import {
 } from '@angular/animations';
 import { Title } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { NavigateBackService } from './services/navigate-back.service';
 
 @Component({
   selector: 'app-root',
@@ -43,7 +44,8 @@ export class AppComponent {
   constructor(
     private router: Router,
     private componentTitle: Title,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private navigateBack: NavigateBackService
     ) {}
 
     ngOnInit() {
@@ -62,5 +64,10 @@ export class AppComponent {
     removeSlashes(title: string) {
       const newTitle = title.split('/').pop();
       return newTitle.charAt(0).toUpperCase() + newTitle.slice(1);
+    }
+
+    navigateToLastRoute() {
+      const route = this.navigateBack.getPreviousUrl();
+      this.router.navigate([route]);
     }
 }
