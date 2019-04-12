@@ -27,3 +27,62 @@ ul {
   list-style: none;
   padding-left:0;
 }
+.negativeMsg {
+  color:#fff;
+  background-color: #e62e00;
+}
+.positiveMsg {
+  background-color: rgba(57, 211, 18,.95);
+  color:#0f301a;
+}
+.error {
+  position:fixed;
+  bottom:5rem;
+  opacity:100;
+  text-align: center;
+  border-radius:3px;
+  border:1px solid #0f301a;
+  width:80%;
+  left:50%;
+  transform: translateX(-50%);
+  opacity:0;
+  -webkit-animation: fadein 5s;
+  -moz-animation: fadein 5s;
+  -ms-animation: fadein 5s;
+  -o-animation: fadein 5s;
+  animation: fadein 5s;
+}
+@keyframes fadein {
+  0% { opacity: 0; }
+  20%   { opacity: 1; }
+  80%   { opacity: 1; }
+  100%   { opacity: 0; }
+}
+
+@-moz-keyframes fadein {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadein {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-ms-keyframes fadein {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadein {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}

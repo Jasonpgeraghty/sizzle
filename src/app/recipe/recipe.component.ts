@@ -18,6 +18,7 @@ export class RecipeComponent implements OnInit {
   ) { }
 
   recipe: any;
+  feedbackMsg = 0;
 
   ngOnInit() {
     this.recipe = null;
@@ -32,9 +33,23 @@ export class RecipeComponent implements OnInit {
                         .split('-')
                         .join(' '));
 
-    console.log(this.recipe);
     if (recipeName !== currentRoute) {
       this.router.navigate(['page-not-found']);
+    }
+  }
+
+  favourite() {
+    const recipe = {
+      image : this.recipe.image,
+      label : this.recipe.label
+    };
+    const bool = this.storage.setFavourite(recipe);
+    if (bool) {
+      this.feedbackMsg = 1;
+      setTimeout(() => this.feedbackMsg = 0, 5100);
+    } else {
+      this.feedbackMsg = 2;
+      setTimeout(() => this.feedbackMsg = 0, 5100);
     }
   }
 }

@@ -1,8 +1,14 @@
 <img src="{{recipe.image}}" alt="">
 <div>
   <h3>Ingredients</h3>
-  <img src="../../assets/Icons/small-favourite.png" alt="Favourite">
+  <img src="../../assets/Icons/small-favourite.png" alt="Favourite" (click)="favourite()">
   <ul *ngFor="let ingredient of recipe.ingredients">
     <li>{{ingredient.text}}</li>
   </ul>
+</div>
+<div *ngIf="feedbackMsg === 1" class='error positiveMsg'>
+    Added to favourites!
+</div>
+<div *ngIf="feedbackMsg === 2" class='error negativeMsg'>
+    Already in favourites!
 </div>
