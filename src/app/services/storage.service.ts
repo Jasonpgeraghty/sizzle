@@ -8,7 +8,7 @@ export class StorageService {
   coords = undefined;
   recipes = undefined;
   recipe = undefined;
-  favourites = undefined;
+  favourites = [];
 
   constructor(
   ) {
@@ -21,7 +21,7 @@ export class StorageService {
     localStorage.setItem('coords', this.coords);
     localStorage.setItem('recipes', this.recipes);
     localStorage.setItem('recipes', this.recipe);
-    localStorage.setItem('favourites', this.favourites);
+    localStorage.setItem('favourites', this.favourites.toString());
   }
 
   setRecipes(recipes) {
@@ -37,8 +37,26 @@ export class StorageService {
     return JSON.parse(localStorage.getItem('recipe'));
   }
 
+  getFavourites() {
+    return JSON.parse(localStorage.getItem('favourites'));
+  }
 
-
-
+  setFavourite(recipe) {
+    let favourites = this.getFavourites();
+    let checkMatch = false;
+    for (const favourite in favourites) {
+      if (favourites[favourite].label === recipe.label) {
+        checkMatch = true;
+      }
+    }
+    if (checkMatch !== true) {
+      favourites.push(recipe);
+      favourites = JSON.stringify(favourites);
+      localStorage.setItem('favourites', favourites);
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 }
