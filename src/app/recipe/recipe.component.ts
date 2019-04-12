@@ -39,11 +39,7 @@ export class RecipeComponent implements OnInit {
   }
 
   favourite() {
-    const recipe = {
-      image : this.recipe.image,
-      label : this.recipe.label
-    };
-    const bool = this.storage.setFavourite(recipe);
+    const bool = this.storage.setFavourite(this.recipe);
     if (bool) {
       this.feedbackMsg = 1;
       setTimeout(() => this.feedbackMsg = 0, 5100);
