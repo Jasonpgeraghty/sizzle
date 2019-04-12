@@ -38,7 +38,11 @@ export class StorageService {
   }
 
   getFavourites() {
-    return JSON.parse(localStorage.getItem('favourites'));
+    let favs = localStorage.getItem('favourites');
+    if ( favs === '') {
+      favs = '[]';
+    }
+    return JSON.parse(favs);
   }
 
   setFavourite(recipe) {
@@ -58,5 +62,4 @@ export class StorageService {
       return false;
     }
   }
-
 }
