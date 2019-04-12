@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: '', component: CategoriesComponent},
   {path: 'category/:name', component: CategoryComponent},
   {path: 'recipe/:name', component: RecipeComponent},
+  {path: 'recipe', component: RecipeComponent}, //for testing
   {path: 'favourites', component: FavouritesComponent},
   {path: 'search', component: SearchComponent},
   {path: 'ingredients', component: IngredientsComponent},
