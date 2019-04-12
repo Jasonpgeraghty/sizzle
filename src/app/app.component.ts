@@ -53,17 +53,12 @@ export class AppComponent {
     .subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (event.url !== '/') {
-          this.title = this.removeSlashes(event.url);
+          this.title = this.navigateBack.removeSlashes(event.url);
         } else {
           this.title = 'Sizzle';
         }
       }
     });
-    }
-
-    removeSlashes(title: string) {
-      const newTitle = title.split('/').pop();
-      return newTitle.charAt(0).toUpperCase() + newTitle.slice(1).split('-').join(' ');
     }
 
     navigateToLastRoute() {
