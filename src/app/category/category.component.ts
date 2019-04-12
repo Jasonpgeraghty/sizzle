@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipesService } from '../services/recipes.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-category',
@@ -15,7 +16,8 @@ export class CategoryComponent implements OnInit {
   constructor(
     private recipeService: RecipesService,
     private activeRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private storage: StorageService
   ) {
 
     this.recipes = null;
@@ -28,6 +30,7 @@ export class CategoryComponent implements OnInit {
     .subscribe(
       (recipes: any) => {
         if (recipes !== undefined) {
+          console.log(recipes);
           this.recipes = recipes.hits;
         }
     });
@@ -37,6 +40,13 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  goToRecipe(recipe) {
+    console.log(recipe);
+    if (this.storage.setRecipe(recipe)) {
+      this.router.navigate([`recipe/${recipe.label.split(' ').join('-')}`]);
+    }
   }
 
 }

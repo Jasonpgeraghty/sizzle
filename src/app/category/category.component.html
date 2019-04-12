@@ -1,4 +1,4 @@
-<div *ngFor='let recipe of recipes'>
+<div *ngFor='let recipe of recipes' (click)="goToRecipe(recipe.recipe)">
   <img src="{{recipe.recipe.image}}" alt="">
   <h2>{{recipe.recipe.label}}</h2>
 </div>
