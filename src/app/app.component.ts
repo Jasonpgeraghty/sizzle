@@ -67,7 +67,7 @@ export class AppComponent {
     }
 
     navigateToLastRoute() {
-      const route = this.navigateBack.getPreviousUrl();
+      const route = this.navigateBack.getPreviousRoute();
       this.router.navigate([route]);
     }
 }
