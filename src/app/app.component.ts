@@ -63,7 +63,7 @@ export class AppComponent {
 
     removeSlashes(title: string) {
       const newTitle = title.split('/').pop();
-      return newTitle.charAt(0).toUpperCase() + newTitle.slice(1);
+      return newTitle.charAt(0).toUpperCase() + newTitle.slice(1).split('-').join(' ');
     }
 
     navigateToLastRoute() {
