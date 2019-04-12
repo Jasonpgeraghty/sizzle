@@ -33,6 +33,10 @@ export class StorageService {
     return true;
   }
 
+  getRecipe() {
+    return JSON.parse(localStorage.getItem('recipe'));
+  }
+
 
 
 
