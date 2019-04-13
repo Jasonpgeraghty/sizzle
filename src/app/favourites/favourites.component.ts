@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-favourites',
   templateUrl: './favourites.component.html',
-  styleUrls: ['./favourites.component.sass']
+  styleUrls: ['./favourites.component.scss']
 })
 export class FavouritesComponent implements OnInit {
 
