@@ -17,6 +17,7 @@ import { SearchComponent } from './search/search.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CountryComponent } from './country/country.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SearchComponent,
     IngredientsComponent,
     CountryComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
