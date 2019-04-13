@@ -10,3 +10,12 @@ img:hover, img:focus {
   transform: rotate(360deg);
   cursor:pointer;
 }
+div {
+  padding:2rem;
+  margin:.5rem;
+  border-radius: 5px;
+  border: 1px solid #cdcdcd;
+}
+div:hover {
+  cursor:pointer;
+}
