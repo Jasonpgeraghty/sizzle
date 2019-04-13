@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../services/location.service';
 import { CountriesService } from '../services/countries.service';
+import { GeolocationService } from '../services/geolocation.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,11 +14,14 @@ export class CountryComponent implements OnInit {
   constructor(
     private location: LocationService,
     private countries: CountriesService,
+    private geoLocation: GeolocationService,
     private router: Router
   ) { }
 
   countryList: any;
   selectedValue: string;
+  coords: any;
+  country: any;
 
   ngOnInit() {
     this.getCountries();
@@ -27,7 +31,32 @@ export class CountryComponent implements OnInit {
 
   getLocation() {
     if ('geolocation' in navigator) {
-      this.location.getLocation();
+      this.location
+        .getLocation()
+        .then(
+          coords => {
+            this.coords = coords;
+            const lat = this.coords.lat;
+            const long = this.coords.long;
+            this.geoLocation.getLocation(long, lat)
+            .subscribe(
+              result => {
+                this.country = result;
+                // Provides country code
+                this.country = this.country.results[0].locations[0].adminArea1;
+                let country: any;
+                for (country in this.countryList) {
+                  if (this.countryList[country].code === this.country) {
+                    this.router.navigate([`category/${this.countryList[country].name}`]);
+                    break;
+                  }
+                }
+            });
+          }
+        );
+
+      // console.log(this.coords);
+
     } else {
       console.log('geolocation not active');
     }
