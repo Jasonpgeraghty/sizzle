@@ -16,7 +16,11 @@ export class SearchComponent implements OnInit {
   }
 
   searchValue(value) {
-    value = value.toLowerCase();
-    this.route.navigate([`/category/${value}`]);
+    if (value === '') {
+      console.log('empty');
+    } else {
+      value = value.toLowerCase();
+      this.route.navigate([`/category/${value}`]);
+    }
   }
 }
