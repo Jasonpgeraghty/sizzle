@@ -16,6 +16,10 @@ div img {
   position: absolute;
   top:.2rem;
   right:.3rem;
+  transition: transform .2s;
+}
+div img:hover {
+  transform: scale(1.12);
 }
 div {
   background: #fff;
@@ -51,38 +55,4 @@ ul {
   -ms-animation: fadein 5s;
   -o-animation: fadein 5s;
   animation: fadein 5s;
-}
-@keyframes fadein {
-  0% { opacity: 0; }
-  20%   { opacity: 1; }
-  80%   { opacity: 1; }
-  100%   { opacity: 0; }
-}
-
-@-moz-keyframes fadein {
-  0%   { opacity: 0; }
-  20%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-webkit-keyframes fadein {
-  0%   { opacity: 0; }
-  20%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-ms-keyframes fadein {
-  0%   { opacity: 0; }
-  20%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-o-keyframes fadein {
-  0%   { opacity: 0; }
-  20%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { opacity: 0; }
 }
