@@ -6,7 +6,7 @@ img {
   width:auto;
   transition: transform 0.5s;
 }
-img:hover {
+img:hover, img:focus {
   transform: rotate(360deg);
   cursor:pointer;
 }
