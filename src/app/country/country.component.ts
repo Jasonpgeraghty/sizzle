@@ -13,6 +13,10 @@ export class CountryComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+  }
+
+  getLocation() {
     this.location.getLocation();
   }
 
