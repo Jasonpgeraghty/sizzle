@@ -5,3 +5,38 @@ button {
   color:#fff;
   border-radius:4px;
 }
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  20%   { opacity: 1; }
+  80%   { opacity: 1; }
+  100%   { opacity: 0; }
+}
+
+@-moz-keyframes fadein {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadein {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-ms-keyframes fadein {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadein {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
