@@ -1,0 +1,26 @@
+div {
+  text-align: center;
+  height:calc(100vh - 9.5rem);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+label, select, button {
+  display:block;
+  margin:1rem auto
+}
+select {
+  border:1px solid rgb(255, 164, 44);
+  padding:10px;
+  background: #fff;
+}
+button {
+  background: rgb(255, 164, 44);
+  color:#fff;
+  border-radius:4px;
+  padding:13px 25px;
+  margin-bottom:4rem;
+}
+button:last-of-type {
+  margin-top:3rem;
+}
