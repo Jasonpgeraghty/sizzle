@@ -15,7 +15,16 @@ div {
   margin:.5rem;
   border-radius: 5px;
   border: 1px solid #cdcdcd;
+  transition: translate .4s;
 }
 div:hover {
   cursor:pointer;
+  transform: scale(1.04);
+  box-shadow: 8px 10px 12px -6px;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    margin-top:7.5rem;
+  }
 }
