@@ -11,6 +11,7 @@ import { CategoryComponent } from './category/category.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { RecipesService } from './services/recipes.service';
 import { LocationService } from './services/location.service';
+import { GeolocationService } from './services/geolocation.service';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { SearchComponent } from './search/search.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
@@ -38,7 +39,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   providers: [
     RecipesService,
-    LocationService
+    LocationService,
+    GeolocationService
   ],
   bootstrap: [AppComponent]
 })
