@@ -1,0 +1,20 @@
+img {
+  position:absolute;
+  top:3.7rem;
+  right:0;
+  height:3rem;
+  width:auto;
+  transition: transform 0.5s;
+}
+div {
+  padding:2rem;
+  margin:.5rem;
+  border-radius: 5px;
+  border: 1px solid #cdcdcd;
+  transition: translate .4s;
+}
+div:hover {
+  cursor:pointer;
+  transform: scale(1.04);
+  box-shadow: 8px 10px 12px -6px;
+}
