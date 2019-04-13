@@ -8,12 +8,13 @@ import { SearchComponent } from './search/search.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CountryComponent } from './country/country.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   {path: '', component: CategoriesComponent},
   {path: 'category/:name', component: CategoryComponent},
   {path: 'recipe/:name', component: RecipeComponent},
-  {path: 'recipe', component: RecipeComponent}, //for testing
+  {path: 'settings', component: SettingsComponent},
   {path: 'favourites', component: FavouritesComponent},
   {path: 'search', component: SearchComponent},
   {path: 'ingredients', component: IngredientsComponent},
