@@ -1,0 +1,12 @@
+img {
+  position:absolute;
+  top:3.7rem;
+  right:0;
+  height:3rem;
+  width:auto;
+  transition: transform 0.5s;
+}
+img:hover {
+  transform: rotate(360deg);
+  cursor:pointer;
+}
