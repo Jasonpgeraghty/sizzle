@@ -6,7 +6,7 @@ import { StorageService } from '../services/storage.service';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.sass']
+  styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent implements OnInit {
 
@@ -45,7 +45,9 @@ export class CategoryComponent implements OnInit {
   goToRecipe(recipe) {
     console.log(recipe);
     if (this.storage.setRecipe(recipe)) {
-      this.router.navigate([`recipe/${recipe.label.split(' ').join('-')}`]);
+      this.router.navigate([`recipe/${recipe.label
+                            .split(' ').join('-')
+                            .split('/').join('-')}`]);
     }
   }
 
