@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { resolve } from 'path';
 
 @Injectable({
   providedIn: 'root'
@@ -9,25 +10,20 @@ export class LocationService {
   ) { }
 
 getLocation() {
-  let coords: any;
-
-  coords = navigator
-            .geolocation
-            .getCurrentPosition(
-              this.getPositionSuccess,
-              this.getPositionError,
-              {enableHighAccuracy: true}
-              );
-  return coords;
+  return new Promise((resolve, reject) => {
+  navigator
+  .geolocation
+  .getCurrentPosition(
+    position => {
+      resolve({
+        long: position.coords.longitude, lat: position.coords.latitude
+      });
+    },
+    error => {
+      console.log(`Something went wrong: ${error}`);
+    },
+    {enableHighAccuracy: true}
+    );
+  });
 }
-
-// Location callbacks
-getPositionSuccess(position) {
-    console.log(position);
-}
-
-getPositionError(err) {
-    console.log(`Something went wrong: ${err.messages}`);
-}
-
 }
