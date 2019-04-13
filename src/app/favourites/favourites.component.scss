@@ -1,0 +1,32 @@
+div {
+  border: 1px solid #cdcdcd;
+  display:flex;
+  align-items:center;
+  margin:10px;
+  img {
+    height:10rem;
+    border-right:1px solid #cdcdcd;
+  }
+  h2 {
+    flex:3;
+    padding:15px;;
+  }
+}
+div:hover {
+  cursor:pointer;
+  transform: scale(1.04);
+  box-shadow: 8px 10px 12px -6px;
+}
+
+@media only screen and (max-width: 438px) {
+  div {
+    flex-direction: column;
+    img {
+      width:100%;
+      height:auto;
+      border-right:0;
+      border-bottom:1px solid #cdcdcd;
+    }
+  }
+}
+
