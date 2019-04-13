@@ -17,7 +17,16 @@ select {
 button {
   padding:13px 25px;
   margin-bottom:4rem;
+  transition: translate .2s;
+  border-radius: 4px;
+  border:1px solid #cdcdcd;
 }
 button:last-of-type {
   margin-top:3rem;
+}
+button:hover, button:focus {
+  cursor:pointer;
+  transform: scale(1.08);
+  background-color:#ffbf80;
+  box-shadow: 8px 10px 8px -10px #000;
 }
