@@ -28,6 +28,10 @@ export class StorageService {
     localStorage.setItem('recipes', JSON.stringify(recipes));
   }
 
+  getRecipes() {
+    return JSON.parse(localStorage.getItem('recipes'));
+  }
+
   setRecipe(recipe) {
     localStorage.setItem('recipe', JSON.stringify(recipe));
     return true;
