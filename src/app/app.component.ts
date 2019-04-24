@@ -12,6 +12,7 @@ import { Title } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { NavigateBackService } from './services/navigate-back.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -44,16 +45,14 @@ export class AppComponent {
 
   constructor(
     private router: Router,
-    private componentTitle: Title,
-    private activatedRoute: ActivatedRoute,
     private navigateBack: NavigateBackService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private location: Location
     ) {}
 
     ngOnInit() {
       this.spinner.show();
       setTimeout(() => {
-          /** spinner ends after 5 seconds */
           this.spinner.hide();
       }, 3000);
       this.router.events
@@ -69,7 +68,6 @@ export class AppComponent {
     }
 
     navigateToLastRoute() {
-      const route = this.navigateBack.getPreviousRoute();
-      this.router.navigate([route]);
+      this.location.back();
     }
 }
