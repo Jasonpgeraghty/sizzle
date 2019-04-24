@@ -5,6 +5,8 @@ img {
   height:3rem;
   width:auto;
   transition: transform 0.5s;
+  background: #fff;
+  border-radius: 50%;
 }
 img:hover, img:focus {
   transform: rotate(360deg);
