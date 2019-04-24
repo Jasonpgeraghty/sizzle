@@ -1,3 +1,13 @@
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#333"
+size = "medium"
+color = "#da3131"
+type = "fire"
+[fullScreen] = "true"
+>
+<p style="color: white" > Loading... </p>
+</ngx-spinner>
 <div *ngFor='let recipe of recipes' (click)="goToRecipe(recipe.recipe)">
   <img src="{{recipe.recipe.image}}" alt="">
   <h2>{{recipe.recipe.label}}</h2>

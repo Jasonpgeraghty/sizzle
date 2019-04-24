@@ -3,6 +3,7 @@ div {
   display:flex;
   align-items:center;
   margin:10px;
+  transition-duration: .4s;
   img {
     height:10rem;
     border-right:1px solid #cdcdcd;
@@ -16,6 +17,9 @@ div:hover {
   cursor:pointer;
   transform: scale(1.04);
   box-shadow: 8px 10px 12px -6px;
+}
+ngx-spinner {
+  margin-top:100px;
 }
 @media only screen and (max-width: 438px) {
   div {
