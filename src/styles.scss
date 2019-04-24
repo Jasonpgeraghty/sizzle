@@ -60,3 +60,28 @@ button:hover, select:hover {
   80%  { opacity: 1; }
   100% { opacity: 0; }
 }
+
+@keyframes moveinup {
+  from {transform: translateY(1000%);}
+  to {transform: translateY(0);}
+}
+
+@-moz-keyframes moveinup {
+  from {transform: translateY(1000%);}
+  to {transform: translateY(0);}
+}
+
+@-webkit-keyframes moveinup {
+  from {transform: translateY(1000%);}
+  to {transform: translateY(0);}
+}
+
+@-ms-keyframes moveinup {
+  from {transform: translateY(1000%);}
+  to {transform: translateY(0);}
+}
+
+@-o-keyframes moveinup {
+  from {transform: translateY(1000%);}
+  to {transform: translateY(0);}
+}
