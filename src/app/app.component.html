@@ -1,12 +1,17 @@
+<!-- Top bar -->
 <div class='fixed-top'>
   <div class='col-3'>
-    <img  src="../assets/Icons/back.png" alt="Back" style='fill:white;' (click)="navigateToLastRoute()">
+    <img  src="../assets/Icons/back.png" alt="Back" (click)="navigateToLastRoute()">
   </div>
   <h1>{{title}}</h1>
 </div>
+
+<!-- Content  -->
 <div class='container' [@myAnimation]="o.isActivated ? o.activatedRoute : ''">
   <router-outlet #o="outlet"></router-outlet>
 </div>
+
+<!-- Footer -->
 <footer class='fixed-bottom'>
   <div class='col-4'>
     <img src="../assets/Icons/search.png" alt="Search" [routerLink]="['/search']">
@@ -18,6 +23,8 @@
     <img src="../assets/Icons/favourite.png" alt="Favourites" [routerLink]="['/favourites']">
   </div>
 </footer>
+
+<!-- Spinner -->
 <ngx-spinner
 bdOpacity = 0
 bdColor = "rgba(51,51,51,.8)"
