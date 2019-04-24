@@ -1,5 +1,33 @@
 {
   "NOT_FOUND": {
   "MESSAGE": "Sorry, that page could not be found"
+  },
+  "CATEGORIES": {
+    "STARTER": "Starter",
+    "MAIN_COURSE": "Main course",
+    "DESSERT": "Dessert",
+    "INGREDIENTS": "Ingredients",
+    "COUNTRY": "Country"
+  },
+  "INGREDIENTS": {
+    "CHICKEN": "Chicken",
+    "BEEF": "Beef",
+    "DUCK": "Duck",
+    "LAMB": "Lamb",
+    "POTATOE": "Potatoe",
+    "TURKEY": "Turkey",
+    "FISH": "Fish",
+    "PASTA": "Pasta",
+    "CURRY": "Curry"
+  },
+  "SEARCH": {
+    "SEARCH": "Search ..."
+  },
+  "COUNTRY": {
+    "CHOOSE": "Choose country",
+    "OR": "or",
+    "GET_RECIPE": "Get recipe",
+    "GET_LOCATION": "Get location",
+    "SELECT_COUNTRY": "Select country"
   }
  }
