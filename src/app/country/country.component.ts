@@ -3,6 +3,7 @@ import { LocationService } from '../services/location.service';
 import { CountriesService } from '../services/countries.service';
 import { GeolocationService } from '../services/geolocation.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-country',
@@ -15,7 +16,8 @@ export class CountryComponent implements OnInit {
     private location: LocationService,
     private countries: CountriesService,
     private geoLocation: GeolocationService,
-    private router: Router
+    private router: Router,
+    private spinner: NgxSpinnerService
   ) { }
 
   countryList: any;
@@ -31,6 +33,7 @@ export class CountryComponent implements OnInit {
 
   getLocation() {
     if ('geolocation' in navigator) {
+      this.spinner.show();
       this.location
         .getLocation()
         .then(
