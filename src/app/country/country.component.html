@@ -1,14 +1,13 @@
 <div>
-  <label for="country">Choose country</label>
+  <label for="country"  [translate]="'COUNTRY.CHOOSE'"></label>
   <select name="country" [(ngModel)]="selectedValue">
-    <option value="0" selected>
-        Select country
+    <option value="0"  [translate]="'COUNTRY.SELECT_COUNTRY'" selected>
       </option>
     <option value="{{country.name}}" *ngFor="let country of countryList">
       {{country.name}}
     </option>
   </select>
-  <button (click)="getRecipeForCountry()">Get recipes</button>
-  <p>or</p>
-  <button (click)="getLocation()">Get your location</button>
+  <button (click)="getRecipeForCountry()" [translate]="'COUNTRY.GET_RECIPE'"></button>
+  <p  [translate]="'COUNTRY.OR'"></p>
+  <button (click)="getLocation()"  [translate]="'COUNTRY.GET_LOCATION'">Get your location</button>
 </div>
