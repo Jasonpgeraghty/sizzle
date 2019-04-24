@@ -13,7 +13,6 @@ export class RecipesService {
   private credentials = '&app_id=8b4dd0c9&app_key=502781d3fd4f0135bc4e1ce880982d88';
 
   searchRecipes(query: string) {
-    console.log(this.generateRandomNum());
     return this.http.get(`${this.url}?q=${query + this.credentials}`);
   }
 
