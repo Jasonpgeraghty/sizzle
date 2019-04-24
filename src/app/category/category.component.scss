@@ -4,6 +4,8 @@ div {
   align-items:center;
   margin:10px;
   transition-duration: .2s;
+  animation-name: moveinup;
+  animation-duration: 3s;
   img {
     height:10rem;
     border-right:1px solid #cdcdcd;
