@@ -1,0 +1,16 @@
+select {
+  display:block;
+  margin-bottom:1rem;
+}
+button {
+  padding:.6rem;
+  border-radius: 3px;
+  margin-top:3rem;
+}
+button:hover, button:focus {
+  cursor:pointer;
+  transform: scale(1.08);
+  transition-duration: .2s;
+  background-color:#ffbf80;
+  box-shadow: 8px 10px 8px -10px #000;
+}
