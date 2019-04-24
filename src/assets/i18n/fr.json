@@ -1,0 +1,33 @@
+{
+  "NOT_FOUND": {
+  "MESSAGE": "Désolé, cette page est introuvable."
+  },
+  "CATEGORIES": {
+    "STARTER": "Entrée",
+    "MAIN_COURSE": "Plat principal",
+    "DESSERT": "Dessert",
+    "INGREDIENTS": "Ingrédients",
+    "COUNTRY": "Pays"
+  },
+  "INGREDIENTS": {
+    "CHICKEN": "Poulet",
+    "BEEF": "Du boeuf",
+    "DUCK": "Canard",
+    "LAMB": "Agneau",
+    "POTATOE": "Pomme de terre",
+    "TURKEY": "Dinde",
+    "FISH": "Poisson",
+    "PASTA": "Pâtes",
+    "CURRY": "Curry"
+  },
+  "SEARCH": {
+    "SEARCH": "Chercher ..."
+  },
+  "COUNTRY": {
+    "CHOOSE": "Choisissez un pays",
+    "OR": "ou",
+    "GET_RECIPE": "Obtenir la recette",
+    "GET_LOCATION": "Obtenir l'emplacement",
+    "SELECT_COUNTRY": "Choisissez le pays"
+  }
+ }
