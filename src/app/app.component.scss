@@ -3,6 +3,10 @@
 /* ###################################################### */
 $top-bar-height: 3.5rem;
 $bottom-bar-height: 4rem;
+$theme-colors: (
+  "primary": rgb(255, 187, 15),
+  "text": #cdcdcd
+);
 /* ###################################################### */
 /* ################### Tabs & Top bar ################### */
 /* ###################################################### */
@@ -34,7 +38,7 @@ footer img {
   transition: transform .2s;
 }
 div:first-of-type, footer {
-  background: rgb(255, 187, 15);
+  background-color: map-get($theme-colors, "primary");
   color:white;
 }
 footer img:hover, footer img:focus, div:first-of-type img:hover {
