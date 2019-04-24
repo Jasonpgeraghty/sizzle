@@ -22,6 +22,7 @@ export class StorageService {
     localStorage.setItem('recipes', this.recipes);
     localStorage.setItem('recipes', this.recipe);
     localStorage.setItem('favourites', this.favourites.toString());
+    localStorage.setItem('darkmode', '0');
   }
 
   setRecipes(recipes) {
@@ -65,5 +66,13 @@ export class StorageService {
     } else {
       return false;
     }
+  }
+
+  getDarkmode() {
+    return localStorage.getItem('darkmode');
+  }
+
+  setDarkmode(value) {
+    localStorage.setItem('darkmode', value);
   }
 }
