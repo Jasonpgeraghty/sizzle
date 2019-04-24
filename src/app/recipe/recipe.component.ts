@@ -24,8 +24,10 @@ export class RecipeComponent implements OnInit {
     this.recipe = null;
     this.recipe = this.storage.getRecipe();
     const recipeName = this.recipe.label
-                      .split('-')
-                      .join(' ');
+                      .split('-').join(' ')
+                      .split('(').join(' ')
+                      .split(')').join(' ')
+                      .split('/').join(' ');
 
     const currentRoute = this.navigation
                         .removeSlashes(this.navigation
