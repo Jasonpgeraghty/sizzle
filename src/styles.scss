@@ -1,9 +1,23 @@
-$body-bg: #fff;
+$body-bg: #fff !important;
+$brand-primary: rgb(255, 164, 44);
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+:root {
+  --text-color: #292f33;
+}
+p,label,h2,h3,li {
+  color: var(--text-color);
+}
+.body-class {
+  background-color: #343434 !important;
+}
+select {
+  border:1px solid rgb(255, 164, 44);
+  background: #fff;
+}
 button {
-  background: rgb(255, 164, 44);
+  background: $brand-primary;
   color:#fff;
   border-radius:4px;
 }
