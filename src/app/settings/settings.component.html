@@ -1,3 +1,6 @@
-<p>
-  settings works!
-</p>
+<label for="language" [translate]="'SETTINGS.LANGUAGE'"></label><br>
+<select name="language" (change)="onChange($event.target.value)">
+  <option  [translate]="'SETTINGS.SELECT_LANGUAGE'"></option>
+  <option value="en">English</option>
+  <option value="fr">Français</option>
+</select>
