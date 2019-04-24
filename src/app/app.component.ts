@@ -13,6 +13,7 @@ import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { NavigateBackService } from './services/navigate-back.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import {Location} from '@angular/common';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -47,8 +48,12 @@ export class AppComponent {
     private router: Router,
     private navigateBack: NavigateBackService,
     private spinner: NgxSpinnerService,
-    private location: Location
-    ) {}
+    private location: Location,
+    public translate: TranslateService
+    ) {
+      translate.addLangs(['en']);
+      translate.setDefaultLang('en');
+    }
 
     ngOnInit() {
       this.spinner.show();

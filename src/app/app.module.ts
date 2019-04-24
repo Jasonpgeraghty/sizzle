@@ -4,6 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import {HttpClient} from '@angular/common/http';
+import {TranslateModule} from '@ngx-translate/core';
+import {TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +23,16 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CountryComponent } from './country/country.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SettingsComponent } from './settings/settings.component';
+
+export function HttpLoaderFactory(client: HttpClient) {
+  return new TranslateHttpLoader(client);
+ }
+
+const translateModule = TranslateModule.forRoot({loader: {
+provide : TranslateLoader,
+useFactory: HttpLoaderFactory,
+deps : [HttpClient]
+}});
 
 @NgModule({
   declarations: [
@@ -39,7 +53,8 @@ import { SettingsComponent } from './settings/settings.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    translateModule
   ],
   providers: [
     RecipesService,
@@ -49,3 +64,4 @@ import { SettingsComponent } from './settings/settings.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
