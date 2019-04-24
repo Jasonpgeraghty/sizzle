@@ -29,5 +29,9 @@
     "GET_RECIPE": "Get recipe",
     "GET_LOCATION": "Get location",
     "SELECT_COUNTRY": "Select country"
+  },
+  "SETTINGS": {
+    "LANGUAGE": "Language:",
+    "SELECT_LANGUAGE": "Select language"
   }
  }

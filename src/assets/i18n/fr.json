@@ -29,5 +29,9 @@
     "GET_RECIPE": "Obtenir la recette",
     "GET_LOCATION": "Obtenir l'emplacement",
     "SELECT_COUNTRY": "Choisissez le pays"
+  },
+  "SETTINGS": {
+    "LANGUAGE": "La langue:",
+    "SELECT_LANGUAGE": "Choisir la langue"
   }
  }
