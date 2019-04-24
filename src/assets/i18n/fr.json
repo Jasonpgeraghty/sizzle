@@ -32,6 +32,7 @@
   },
   "SETTINGS": {
     "LANGUAGE": "La langue:",
-    "SELECT_LANGUAGE": "Choisir la langue"
+    "SELECT_LANGUAGE": "Choisir la langue",
+    "DARK_MODE": "Mode sombre"
   }
  }
