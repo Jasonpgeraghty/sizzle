@@ -18,9 +18,6 @@ div:hover {
   transform: scale(1.04);
   box-shadow: 8px 10px 12px -6px;
 }
-ngx-spinner {
-  margin-top:100px;
-}
 @media only screen and (max-width: 438px) {
   div {
     flex-direction: column;
