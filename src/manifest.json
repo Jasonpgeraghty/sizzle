@@ -1,0 +1,26 @@
+{
+  "name": "sizzle",
+  "short_name": "sizzle",
+  "theme_color": "#FFBB0F",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/logos/SizzelLogo2.png",
+      "sizes": "550x550",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logos/SizzelLogo2_300x300.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logos/SizzelLogo2_256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
