@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import {
   transition,
   trigger,
@@ -12,8 +12,9 @@ import { Title } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { NavigateBackService } from './services/navigate-back.service';
 import { NgxSpinnerService } from 'ngx-spinner';
-import {Location} from '@angular/common';
-import {TranslateService} from '@ngx-translate/core';
+import { Location } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
+import { StorageService } from './services/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -49,17 +50,25 @@ export class AppComponent {
     private navigateBack: NavigateBackService,
     private spinner: NgxSpinnerService,
     private location: Location,
-    public translate: TranslateService
+    public translate: TranslateService,
+    private storage: StorageService,
+    private renderer: Renderer2
     ) {
-      translate.addLangs(['en']);
-      translate.setDefaultLang('en');
-    }
-
-    ngOnInit() {
       this.spinner.show();
       setTimeout(() => {
           this.spinner.hide();
       }, 3000);
+      translate.addLangs(['en']);
+      translate.setDefaultLang('en');
+      const darkModeEnabled = this.storage.getDarkmode();
+      if ( darkModeEnabled === '1') {
+        document.documentElement.style
+        .setProperty('--text-color', '#fff');
+        this.renderer.addClass(document.body, 'body-class');
+      }
+    }
+
+    ngOnInit() {
       this.router.events
     .subscribe((event) => {
       if (event instanceof NavigationEnd) {
