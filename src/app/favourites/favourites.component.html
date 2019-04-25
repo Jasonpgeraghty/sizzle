@@ -1,4 +1,4 @@
-<div *ngIf="favourites.length === 0">No favourites yet!</div>
+<div *ngIf="favourites.length === 0"><h2>No favourites yet!</h2></div>
 <div *ngFor='let favourite of favourites' (click)="goToFavourite(favourite)">
   <img src="{{favourite.image}}" alt="">
   <h2>{{favourite.label}}</h2>

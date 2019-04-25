@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../services/storage.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-favourites',
@@ -11,12 +12,17 @@ export class FavouritesComponent implements OnInit {
 
   constructor(
     private storage: StorageService,
-    private router: Router
+    private router: Router,
+    private spinner: NgxSpinnerService
   ) { }
 
   favourites: any;
 
   ngOnInit() {
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 3000);
     this.favourites = this.storage.getFavourites();
     console.log(this.favourites);
   }
