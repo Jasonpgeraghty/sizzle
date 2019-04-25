@@ -15,6 +15,9 @@ export class StorageService {
     if (!localStorage.getItem('recipes')) {
       this.initialiseStorage();
     }
+    if (!localStorage.getItem('darkmode')) {
+      localStorage.setItem('darkmode', '0');
+    }
   }
 
   initialiseStorage() {
@@ -22,7 +25,6 @@ export class StorageService {
     localStorage.setItem('recipes', this.recipes);
     localStorage.setItem('recipes', this.recipe);
     localStorage.setItem('favourites', this.favourites.toString());
-    localStorage.setItem('darkmode', '0');
   }
 
   setRecipes(recipes) {
@@ -30,7 +32,10 @@ export class StorageService {
   }
 
   getRecipes() {
-    return JSON.parse(localStorage.getItem('recipes'));
+    if (localStorage.getItem('recipes') !== 'undefined') {
+      console.log(localStorage.getItem('recipes'));
+      return JSON.parse(localStorage.getItem('recipes'));
+    }
   }
 
   setRecipe(recipe) {
