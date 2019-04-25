@@ -23,6 +23,8 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { CountryComponent } from './country/country.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export function HttpLoaderFactory(client: HttpClient) {
   return new TranslateHttpLoader(client);
@@ -54,7 +56,8 @@ deps : [HttpClient]
     BrowserAnimationsModule,
     FormsModule,
     NgxSpinnerModule,
-    translateModule
+    translateModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     RecipesService,
