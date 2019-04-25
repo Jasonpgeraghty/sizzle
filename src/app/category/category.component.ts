@@ -39,7 +39,11 @@ export class CategoryComponent implements OnInit {
 
       const storedRecipe = this.storage.getRecipes();
 
-      const storedRecipeName = storedRecipe.q;
+      let storedRecipeName: string;
+
+      if (storedRecipe !== undefined) {
+        storedRecipeName = storedRecipe.q;
+      }
 
       if (storedRecipeName !== recipe) {
         this.recipeService.searchRecipes(recipe)
@@ -54,6 +58,7 @@ export class CategoryComponent implements OnInit {
             }
         });
       } else {
+        console.log(this.recipes);
         this.recipes = storedRecipe.hits;
         setTimeout(() => {
           this.spinner.hide();
