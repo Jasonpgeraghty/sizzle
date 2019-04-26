@@ -26,18 +26,16 @@ The application allows users to view the ingredients required to create recipes 
 
 9. Can be added to home screen, as it contains a web manifest file and a compat script.
 
-## Development server
+10. Custom made icons for home page boxes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Mistakes
 
-## Code scaffolding
+Angular generates SASS files instead of SCSS files when creating components. These had to be changed to SCSS files.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Repeatedly forgot to add skipTests flags, when generating components and services.
 
-## Build
+Information being passed through URL and into query needed to be sanitised of characters that could break the link.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Bug causing content not to load if localstorage value was undefined, instead of an object on category.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
