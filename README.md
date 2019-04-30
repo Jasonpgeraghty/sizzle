@@ -37,18 +37,3 @@ Repeatedly forgot to add skipTests flags, when generating components and service
 Information being passed through URL and into query needed to be sanitised of characters that could break the link.
 
 Bug causing content not to load if localstorage value was undefined, instead of an object on category.
-
-
-## Setting up the project
-
-Clone or download the project.
-
-Open terminal or command prompt.
-
-Navigate to the projects directory.
-
-Run `npm install`.
-
-Ensure the Angular CLI is installed on your machine.
-
-Run `ng serve` to run on local development server.
