@@ -1,5 +1,8 @@
 $body-bg: #fff;
 $brand-primary: rgb(255, 164, 44);
+.h2, h2 {
+  font-size:1.4rem !important;
+}
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
@@ -9,6 +12,9 @@ $brand-primary: rgb(255, 164, 44);
 p,label,h2,h3,li {
   color: var(--text-color);
   font-family: Verdana, Geneva, sans-serif;
+}
+h2 {
+  font-size: 1.4rem;
 }
 .body-class {
   background-color: #343434 !important;
@@ -85,4 +91,34 @@ button:hover, select:hover {
 @-o-keyframes moveinup {
   from {transform: translateY(1000%);}
   to {transform: translateY(0);}
+}
+
+@keyframes fadeinwait {
+  0% { opacity: 0; }
+  80%   { opacity: 1; }
+  100%   { opacity: 1; }
+}
+
+@-moz-keyframes fadeinwait {
+  0%   { opacity: 0; }
+  80%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeinwait {
+  0%   { opacity: 0; }
+  80%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeinwait {
+  0%   { opacity: 0; }
+  80%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeinwait {
+  0%   { opacity: 0; }
+  80%  { opacity: 1; }
+  100% { opacity: 1; }
 }
