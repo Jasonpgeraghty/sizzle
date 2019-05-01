@@ -10,12 +10,10 @@ div {
   img {
     height:10rem;
     border-top:1px solid #cdcdcd;
-    margin-top:3.8rem;
   }
   h2 {
     flex:3;
     padding:15px;
-    position:absolute;
     background: #fff;
   }
 }
@@ -31,7 +29,12 @@ div:hover {
       width:100%;
       height:auto;
       border-right:0;
-      border-bottom:1px solid #cdcdcd;
+      border-top:1px solid #cdcdcd;
+      margin-top:3.8rem;
+    }
+    h2 {
+      position:absolute;
+      font-size:1.2rem !important;
     }
   }
 }
