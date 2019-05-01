@@ -7,8 +7,15 @@ div {
   display:flex;
   justify-content: space-between;
   align-items: center;
+  background: #fff;
+  animation-name: fadeinwait;
+  animation-duration: 3s;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
   h2 {
     margin-bottom: 0;
+    color:--text-color;
   }
 }
 div:hover {
@@ -22,7 +29,19 @@ div > embed {
   position:relative;
   z-index:100;
 }
-
+section:nth-of-type(2) {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image: url('../../assets/Images/buffet.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  width:100%;
+  z-index:-1;
+}
 @media only screen and (max-width: 428px) {
   div {
     padding:1rem;
