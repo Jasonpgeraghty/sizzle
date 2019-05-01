@@ -15,12 +15,10 @@ div:first-of-type {
   align-items: center;
   justify-content: space-between;
 }
-div:first-of-type img {
-  height: $top-bar-height;
-  width:auto !important;
-  transition: transform .2s;
-  padding-left:0;
-  margin-left:-0.5rem;
+.fixed-top img {
+  height:3rem;
+  width:auto;
+  margin-left:-15px;
 }
 h1 {
   display:inline-block;
@@ -34,6 +32,7 @@ footer div {
 }
 footer img {
   height:4rem;
+  padding:.5rem;
   width:auto;
   transition: transform .2s;
 }
