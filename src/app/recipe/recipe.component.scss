@@ -59,3 +59,12 @@ h3, li {
   -o-animation: fadein 5s;
   animation: fadein 5s;
 }
+section {
+  background:rgb(236, 235, 235) !important;
+  width:100%;
+  min-height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: -2;
+}
