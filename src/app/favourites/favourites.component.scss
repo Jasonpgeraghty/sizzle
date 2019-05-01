@@ -6,6 +6,7 @@ div {
   transition-duration: .2s;
   animation-name: moveinup;
   animation-duration: 3s;
+  position: relative;
   img {
     height:10rem;
     border-right:1px solid #cdcdcd;
@@ -13,6 +14,7 @@ div {
   h2 {
     flex:3;
     padding:15px;
+    background: #fff;
   }
 }
 div:hover {
@@ -28,7 +30,12 @@ div:hover {
       width:100%;
       height:auto;
       border-right:0;
-      border-bottom:1px solid #cdcdcd;
+      border-top:1px solid #cdcdcd;
+      margin-top:3.8rem;
+    }
+    h2 {
+      position:absolute;
+      font-size:1.2rem !important;
     }
   }
 }
