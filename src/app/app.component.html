@@ -1,10 +1,13 @@
 <!-- Top bar -->
-<div class='fixed-top'>
+<header class='fixed-top'>
   <div class='col-3'>
     <img  src="../assets/Icons/back.png" alt="Back" (click)="navigateToLastRoute()">
   </div>
-  <h1>{{title}}</h1>
-</div>
+  <h1 class='col-6'>{{title}}</h1>
+  <div class='col-3'>
+      <img src="../../assets/Icons/settingsWhite.png" alt="Settings" [routerLink]="['/settings']">
+  </div>
+</header>
 
 <!-- Content  -->
 <div class='container' [@myAnimation]="o.isActivated ? o.activatedRoute : ''">

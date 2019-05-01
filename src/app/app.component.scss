@@ -10,21 +10,18 @@ $theme-colors: (
 /* ###################################################### */
 /* ################### Tabs & Top bar ################### */
 /* ###################################################### */
-div:first-of-type {
+header {
   display:flex;
   align-items: center;
   justify-content: space-between;
 }
-.fixed-top img {
-  height:3rem;
-  width:auto;
-  margin-left:-15px;
-}
+
 h1 {
   display:inline-block;
   font-size:1.5rem;
   margin-right:20px;
   margin-bottom:5px;
+  text-align: center;
 }
 footer div {
   display:inline-block;
@@ -36,12 +33,29 @@ footer img {
   width:auto;
   transition: transform .2s;
 }
-div:first-of-type, footer {
+header, footer {
   background-color: map-get($theme-colors, "primary");
   color:white;
+  transition: transform .2s;
 }
 footer img:hover, footer img:focus, div:first-of-type img:hover {
   transform: scale(1.12);
+}
+header img {
+  padding:.2rem;
+  height:3rem;
+  width:auto;
+  margin-left:auto;
+}header div:nth-of-type(2) img {
+  margin-right:1.3rem;
+}
+header div:nth-of-type(2) {
+  text-align: right;
+}
+header div:nth-of-type(2) img:hover, img:focus {
+  transform: rotate(360deg);
+  transition: transform .4s;
+  cursor:pointer;
 }
 /* ###################################################### */
 /* ############### Router Outlet container ############## */
