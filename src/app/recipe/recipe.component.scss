@@ -6,10 +6,6 @@ img:first-child {
   top:1.5rem;
   z-index:-1;
 }
-h3 {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #cdcdcd;
-}
 div img {
   height:3.5rem;
   width:auto;
@@ -17,6 +13,7 @@ div img {
   top:.2rem;
   right:.3rem;
   transition: transform .2s;
+  padding:.5rem;
 }
 div img:hover {
   transform: scale(1.12);
@@ -33,6 +30,14 @@ ul {
 }
 h3, li {
   color: #292f33;
+  border-bottom:1px solid #e9e6e6;
+}
+li {
+  padding: 10px;
+}
+h3 {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cdcdcd;
 }
 .negativeMsg {
   color:#fff;
