@@ -1,6 +1,7 @@
 div {
   border: 1px solid #cdcdcd;
   display:flex;
+  position: relative;
   align-items:center;
   margin:10px;
   transition-duration: .2s;
@@ -8,11 +9,14 @@ div {
   animation-duration: 3s;
   img {
     height:10rem;
-    border-right:1px solid #cdcdcd;
+    border-top:1px solid #cdcdcd;
+    margin-top:3.8rem;
   }
   h2 {
     flex:3;
-    padding:15px;;
+    padding:15px;
+    position:absolute;
+    background: #fff;
   }
 }
 div:hover {
