@@ -28,7 +28,8 @@ export class NavigateBackService {
   }
 
   removeSlashes(title: string) {
-    const newTitle = title.split('/').pop();
+    title = title.substr(1);
+    const newTitle = title.split('/').shift();
     return newTitle.charAt(0).toUpperCase() + newTitle.slice(1).split('-').join(' ');
   }
 }
