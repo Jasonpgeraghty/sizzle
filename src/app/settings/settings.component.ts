@@ -32,7 +32,7 @@ export class SettingsComponent implements OnInit {
       this.storage.setDarkmode('1');
     } else {
       document.documentElement.style
-      .setProperty('--text-color', '#292f33');
+      .setProperty('--text-color', '#3f4447');
       this.renderer.removeClass(document.body, 'body-class');
       this.storage.setDarkmode('0');
     }
