@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../services/storage.service';
-import { NavigateBackService } from '../services/navigate-back.service';
-import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-recipe',
@@ -12,9 +9,7 @@ import { Router } from '@angular/router';
 export class RecipeComponent implements OnInit {
 
   constructor(
-    private storage: StorageService,
-    private navigation: NavigateBackService,
-    private router: Router
+    private storage: StorageService
   ) { }
 
   recipe: any;
@@ -23,21 +18,6 @@ export class RecipeComponent implements OnInit {
   ngOnInit() {
     this.recipe = null;
     this.recipe = this.storage.getRecipe();
-    const recipeName = this.recipe.label
-                      .split('-').join(' ')
-                      .split('(').join(' ')
-                      .split(')').join(' ')
-                      .split('/').join(' ');
-
-    const currentRoute = this.navigation
-                        .removeSlashes(this.navigation
-                        .getCurrentRoute()
-                        .split('-')
-                        .join(' '));
-
-    if (recipeName !== currentRoute) {
-      this.router.navigate(['page-not-found']);
-    }
   }
 
   favourite() {
