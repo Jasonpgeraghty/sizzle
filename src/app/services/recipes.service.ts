@@ -15,8 +15,4 @@ export class RecipesService {
   searchRecipes(query: string) {
     return this.http.get(`${this.url}?q=${query + this.credentials}`);
   }
-
-  generateRandomNum() {
-    return Math.floor(Math.random() * 100);
-  }
 }
