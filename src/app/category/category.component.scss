@@ -14,7 +14,6 @@ div {
   h2 {
     flex:3;
     padding:15px;
-    background: #fff;
   }
 }
 div:hover {
@@ -25,6 +24,7 @@ div:hover {
 @media only screen and (max-width: 438px) {
   div {
     flex-direction: column;
+    background-color:white;
     img {
       width:100%;
       height:auto;
@@ -35,6 +35,8 @@ div:hover {
     h2 {
       position:absolute;
       font-size:1.2rem !important;
+      background-color:white;
+      color:#3f4447;
     }
   }
 }
