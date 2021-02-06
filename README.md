@@ -47,12 +47,4 @@ The application allows users to view the ingredients required to create recipes 
 
 10. Custom made icons for home page boxes.
 
-## Mistakes
 
-Angular generates SASS files instead of SCSS files when creating components. These had to be changed to SCSS files.
-
-Repeatedly forgot to add skipTests flags, when generating components and services.
-
-Information being passed through URL and into query needed to be sanitised of characters that could break the link.
-
-Bug causing content not to load if localstorage value was undefined, instead of an object on category.
